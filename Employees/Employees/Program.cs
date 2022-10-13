@@ -2,30 +2,38 @@
 {
     class Program
     {
+        public const int IS_PART_TIME = 1;
+        public const int IS_FULL_TIME = 2;
+        public const int EMP_RATE_PER_HOUR = 20;
+        public const int NUM_OF_WORKING_DAYS = 2;
         static void Main(string[] args)
         {
-            int IS_PART_TIME = 1;
-            int IS_FULL_TIME = 2;
-            int EMP_RATE_PER_HOUR = 20;
-            int emphrs = 0;
-            int empwage = 0;
-            Random random = new Random();
-            int empCheck = random.Next(0, 3);
-            switch (empCheck)
+            int empHrs = 0;
+            int empWage = 0;
+            int totalEmpWage = 0;
+            for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
             {
-                case 1 :
-                   emphrs = 4;
-                    break;
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case IS_PART_TIME:
+                        empHrs = 4;
+                        break;
 
-                case 2 :
-                    emphrs = 8;
-                    break;
-                 default : 
-                    emphrs = 0;
-                    break;
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                totalEmpWage += empWage;
+                Console.WriteLine("EMP WAGE : " + empWage);
+                
             }
-            empwage = emphrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("EMP WAGE : " + empwage);
+            Console.WriteLine( "Total Emp Wage= " +totalEmpWage );
         }
     }
 }
