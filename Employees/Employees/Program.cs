@@ -2,42 +2,21 @@
 {
     class Program
     {
-        public const int IS_PART_TIME = 1;
-        public const int IS_FULL_TIME = 2;
-        public static int computeEmpWage(string company,int empRatePerHour,int numOfWorkingDays,int maxHoursPerMonth)
-        {
-            int empHrs = 0;
-            int totalEmpHrs = 0;
-            int totalWorkingDays = 0;
-            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
-            {
-                totalWorkingDays++;
-                Random random = new Random();
-                int empCheck = random.Next(0, 3);
-                switch (empCheck)
-                {
-                    case IS_PART_TIME:
-                        empHrs = 4;
-                        break;
-
-                    case IS_FULL_TIME:
-                        empHrs = 8;
-                        break;
-                    default:
-                        empHrs = 0;
-                        break;
-                }
-                totalEmpHrs += empHrs;
-                Console.WriteLine("DAYS# : " + totalWorkingDays + "Emp Hrs : " + empHrs);
-            }
-            int totalEmpWage = totalEmpHrs * empRatePerHour;
-            Console.WriteLine("Total Emp Wage : " + totalEmpWage);
-            return totalEmpWage;
-        }
         static void Main(string[] args)
         {
-            computeEmpWage("DMart",20,2,10);
-            computeEmpWage("Reliance",10,4,20);
+            EmpWageBuilderObject Airtel = new EmpWageBuilderObject("Airtel", 30, 30, 140);
+            EmpWageBuilderObject Jio = new EmpWageBuilderObject("Jio", 40, 28, 130);
+            EmpWageBuilderObject VI = new EmpWageBuilderObject("VI", 25, 30, 120);
+            EmpWageBuilderObject BSNL = new EmpWageBuilderObject("BSNL", 30, 25, 100);
+            Airtel.computeEmpWage();
+            Console.WriteLine(Airtel.toString());
+            Jio.computeEmpWage();
+            Console.WriteLine(Jio.toString());
+            VI.computeEmpWage();
+            Console.WriteLine(VI.toString());
+            BSNL.computeEmpWage();
+            Console.WriteLine(BSNL.toString());
+
         }
     }
 }
