@@ -4,18 +4,21 @@
     {
         static void Main(string[] args)
         {
-            EmpWageBuilderObject Airtel = new EmpWageBuilderObject("Airtel", 30, 30, 140);
-            EmpWageBuilderObject Jio = new EmpWageBuilderObject("Jio", 40, 28, 130);
-            EmpWageBuilderObject VI = new EmpWageBuilderObject("VI", 25, 30, 120);
-            EmpWageBuilderObject BSNL = new EmpWageBuilderObject("BSNL", 30, 25, 100);
-            Airtel.computeEmpWage();
-            Console.WriteLine(Airtel.toString());
-            Jio.computeEmpWage();
-            Console.WriteLine(Jio.toString());
-            VI.computeEmpWage();
-            Console.WriteLine(VI.toString());
-            BSNL.computeEmpWage();
-            Console.WriteLine(BSNL.toString());
+            Console.WriteLine("Enter Company Name : ");
+            string CompName = Console.ReadLine();
+
+            Console.WriteLine("Enter Employee Rate Per Hour : ");
+            int rate = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter No of Working Days : ");
+            int numOfDays = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Maximum Hours Per Month : ");
+            int maxHourMonth = Convert.ToInt32(Console.ReadLine());
+
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addcompanyEmpWage(CompName, rate, numOfDays, maxHourMonth);
+            empWageBuilder.computeEmpWage();
 
         }
     }
