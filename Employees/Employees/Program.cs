@@ -7,6 +7,7 @@
             int IS_PART_TIME = 1;
             int IS_FULL_TIME = 2;
             int EMP_RATE_PER_HOUR = 20;
+            //Variables
             int emphrs = 0;
             int empwage = 0;
             Random random = new Random();
