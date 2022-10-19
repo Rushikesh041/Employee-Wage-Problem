@@ -9,6 +9,7 @@
         public const int MAX_HRS_IN_MONTH = 10;
         public static int computeEmpWage()
         {
+            //Variables
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
