@@ -36,8 +36,10 @@
         }
         static void Main(string[] args)
         {
-            computeEmpWage("DMart",40,28,120);
-            computeEmpWage("Reliance",45,25,110);
+            computeEmpWage("Airtel", 30, 30, 140);
+            computeEmpWage("Jio", 40, 28, 130);
+            computeEmpWage("VI", 25, 30, 120);
+            computeEmpWage("BSNL", 30, 25, 100);
         }
     }
 }
