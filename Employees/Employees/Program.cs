@@ -8,6 +8,7 @@
         public const int NUM_OF_WORKING_DAYS = 2;
         static void Main(string[] args)
         {
+            //Variables
             int empHrs = 0;
             int empWage = 0;
             int totalEmpWage = 0;
