@@ -6,13 +6,13 @@
         {
             EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
 
-            Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key : ");
+            Console.WriteLine("Enter y to Enter Company Details or otherwise enter any key : ");
             var input = Console.ReadLine();
-            while (input == "i")
+            while (input == "y")
             {
                 var obj = UserInput();
                 empWageBuilder.addcompanyEmpWage(obj.company, obj.empRatePerHour, obj.numOfWorkingDays, obj.maxHoursPerMonth);
-                Console.WriteLine("Enter i to Enter Company Details or otherwise enter any key :");
+                Console.WriteLine("Enter y to Enter Company Details or otherwise enter any key :");
                 input = Console.ReadLine();
             }
             empWageBuilder.computeEmpWage();
