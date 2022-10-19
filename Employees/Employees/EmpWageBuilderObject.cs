@@ -27,7 +27,7 @@ namespace Employees
             {
 
                 int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-
+                //Conditions
                 while (totalEmpHrs <= this.maxHoursPerMonth && totalWorkingDays < this.numOfWorkingDays)
                 {
                     totalWorkingDays++;
