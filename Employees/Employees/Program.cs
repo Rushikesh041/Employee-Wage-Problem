@@ -36,8 +36,8 @@
         }
         static void Main(string[] args)
         {
-            computeEmpWage("DMart",20,2,10);
-            computeEmpWage("Reliance",10,4,20);
+            computeEmpWage("DMart",40,28,120);
+            computeEmpWage("Reliance",45,25,110);
         }
     }
 }
