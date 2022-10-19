@@ -9,6 +9,7 @@
         public const int MAX_HRS_IN_MONTH = 10;
         static void Main(string[] args)
         {
+            //Variables
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
