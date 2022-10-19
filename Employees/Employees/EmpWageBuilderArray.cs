@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Employees
 {
-        public class EmpWageBuilderArray
-        {
+    public class EmpWageBuilderArray
+    {
         public const int IS_FULL_TIME = 1, IS_PART_TIME = 2;
 
         private int numOfCompany = 0;
@@ -36,9 +36,9 @@ namespace Employees
 
         private int computeEmpWage(CompanyEmpWage companyEmpWage)
         {
-            
+            // Variables
             int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-            
+            // Comutation
             while (totalEmpHrs <= companyEmpWage.maxHoursPerMonth && totalWorkingDays < companyEmpWage.numOfWorkingDays)
             {
                 totalWorkingDays++;
@@ -65,5 +65,3 @@ namespace Employees
         }
     }
 }
-
-
