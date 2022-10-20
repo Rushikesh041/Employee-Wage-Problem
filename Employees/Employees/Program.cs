@@ -24,6 +24,7 @@ namespace Employees
             var name = Console.ReadLine();
             while (name == "g")
             {
+                Console.WriteLine("Enter Company Name  ");
                 var detail = empWageBuilder.companyDetailsByName(Console.ReadLine());
                 Console.WriteLine("Comapny Name : " + detail.company);
                 Console.WriteLine("Employee Rate Per Hour : " + detail.empRatePerHour);
